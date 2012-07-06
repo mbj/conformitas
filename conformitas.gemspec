@@ -17,8 +17,8 @@ Gem::Specification.new do |s|
   s.executables   = []
   s.require_paths = ['lib']
 
-  s.add_dependency('virtus',   ['~> 0.4.0'])
-  s.add_dependency('aequitas',   ['~> 0.0.2'])
+  s.add_dependency('virtus',   '~> 0.5.1')
+  s.add_dependency('aequitas', '~> 0.0.2')
 
   s.add_development_dependency('minitest', ['~> 2.8'])
 end
