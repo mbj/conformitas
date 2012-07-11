@@ -2,23 +2,25 @@
 $:.push File.expand_path('../lib', __FILE__)
 require 'conformitas/version'
 
-Gem::Specification.new do |s|
-  s.name        = 'conformitas'
-  s.version     = Conformitas::VERSION.dup
-  s.authors     = ['Emmanuel Gomez']
-  s.email       = ['emmanuel.gomez@gmail.com']
-  s.homepage    = 'https://github.com/emmanuel/conformitas'
-  s.summary     = %q{Library for painless form input processing.}
-  s.description = %q{Library for painless form input processing.}
+Gem::Specification.new do |gem|
+  gem.name        = 'conformitas'
+  gem.version     = Conformitas::VERSION.dup
+  gem.authors     = ['Emmanuel Gomez']
+  gem.email       = ['emmanuel.gomez@gmail.com']
+  gem.homepage    = 'https://github.com/emmanuel/conformitas'
+  gem.summary     = %q{Library for painless form input processing.}
+  gem.description = %q{Library for painless form input processing.}
 
   # git ls-files
-  s.files            = `git ls-files`.split("\n")
-  s.test_files       = `git ls-files -- {spec}/*`.split("\n")
-  s.executables   = []
-  s.require_paths = ['lib']
+  gem.files            = `git ls-files`.split("\n")
+  gem.test_files       = `git ls-files -- {spec}/*`.split("\n")
+  gem.executables   = []
+  gem.require_paths = ['lib']
 
-  s.add_dependency('virtus',   '~> 0.5.1')
-  s.add_dependency('aequitas', '~> 0.0.2')
+  gem.add_dependency('virtus',   '~> 0.5.1')
+  gem.add_dependency('aequitas', '~> 0.0.2')
 
-  s.add_development_dependency('minitest', ['~> 2.8'])
+  gem.add_development_dependency('rake',        '~> 0.9.2')
+  gem.add_development_dependency('rspec',       '~> 1.3.2')
+  gem.add_development_dependency('guard-rspec', '~> 1.0.0')
 end

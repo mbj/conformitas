@@ -24,6 +24,7 @@ module Conformitas
     module InstanceMethods
       def initialize(attributes = {})
         @original_attributes = attributes
+        attributes = {} unless attributes.kind_of?(Hash)
         super(attributes)
         valid?
       end
